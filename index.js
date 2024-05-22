@@ -2,7 +2,8 @@ let mongoose = require('mongoose');
 const app = require('./app')
 const hostname = '127.0.0.1'
 const port = 5000
-mongoose.connect("mongodb+srv://venkatasubbamma990:admin@cluster0.rii1xob.mongodb.net/TodoDB?retryWrites=true&w=majority&appName=Cluster0")
+require("dotenv").config();
+mongoose.connect(process.env.DB)
   .then(() => {
     console.log('Connected to MongoDB');
   })

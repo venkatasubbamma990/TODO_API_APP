@@ -49,10 +49,10 @@ app.post('/createTodos', async (req, res) => {
         })
     }
 })
-app.post('/updateTodo', async (req, res) => {
+app.post('/updateTodo/:_id', async (req, res) => {
     try {
         let Todos = await Todo.updateOne(
-            { _id: req.body.id }, // Filter for the document to update
+            { _id: req.params._id }, // Filter for the document to update
             { 
                 $set: {
                     title: req.body.title,
@@ -79,11 +79,11 @@ app.post('/updateTodo', async (req, res) => {
         })
     }
 })
-app.delete('/deleteTodo', async (req, res) => {
+app.post('/deleteTodo/:_id', async (req, res) => {
     console.log("called")
     try {
         let Todos = await Todo.deleteOne({
-            _id: req.body.id
+            _id: req.params._id
         })
         res.status(200).json({
             status: "success",
