@@ -11,8 +11,7 @@ mongoose.connect(process.env.DB)
     console.error('Error connecting to MongoDB:', error);
   });
   //mongodb://127.0.0.1:27017/TodoDB
-//mongodb+srv://venkatasubbamma990:sudha1454@cluster0.rii1xob.mongodb.net/
-//mongodb+srv://venkatasubbamma:sudha1454@cluster0.dro8kmw.mongodb.net/?retryWrites=true&w=majority
+
 
 
 app.listen(port,hostname , ()=> {
