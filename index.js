@@ -11,9 +11,6 @@ mongoose.connect(process.env.DB)
     console.error('Error connecting to MongoDB:', error);
   });
   //mongodb://127.0.0.1:27017/TodoDB
-
-
-
 app.listen(port,hostname , ()=> {
     console.log(`server is running on http://localhost:${port}`)
 })
