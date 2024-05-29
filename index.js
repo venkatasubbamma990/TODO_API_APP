@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 const app = require('./app')
 const hostname = '127.0.0.1'
-const port = 5000
+const port = process.env.PORT || 5000
 require("dotenv").config();
 mongoose.connect(process.env.DB)
   .then(() => {
