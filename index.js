@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 const app = require('./app')
-const hostname = '127.0.0.1'
+//const hostname = '127.0.0.1'
 const port = process.env.PORT || 5000
 require("dotenv").config();
 mongoose.connect(process.env.DB)
@@ -11,6 +11,6 @@ mongoose.connect(process.env.DB)
     console.error('Error connecting to MongoDB:', error);
   });
   //mongodb://127.0.0.1:27017/TodoDB
-app.listen(port,hostname , ()=> {
+app.listen(port, ()=> {
     console.log(`server is running on http://localhost:${port}`)
 })
