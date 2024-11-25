@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.send('hello world')
 })
+//comment
 app.get('/getTodos', async (req, res) => {
     try {
         let Todos = await Todo.find()
